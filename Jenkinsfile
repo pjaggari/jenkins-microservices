@@ -27,4 +27,17 @@ pipeline {
 		}
 	}
 
+	post{
+		always{
+			echo " This is a microservice"
+		}
+		success{
+			echo " Execueted this step as the build is successfull"
+		}
+
+		failure{
+			echo " Executed this step as the build failed"
+		}
+	}
+
 }
